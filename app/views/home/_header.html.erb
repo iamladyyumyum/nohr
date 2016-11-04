@@ -14,8 +14,13 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     
    <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'About Me', home_about_path %></li>
+    <li><%= link_to 'Konichiwa', root_path %></li>
+    <li><%= link_to 'Watashiwa', home_about_path %></li>
+    <li><%= link_to 'JA Mata', destroy_user_session_path, method: :delete %></li>
+    <li><%= link_to "Join Us", new_user_registration_path, class: "btn btn-primary" %></li>
+    <li><%= link_to "Feast Up", new_user_session_path, class: "btn btn-danger" %>
+</div>
+
    </ul>
     
   </div><!-- /.navbar-collapse -->

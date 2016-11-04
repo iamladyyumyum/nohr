@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   def about
   end
  
-  def playon
+  def ja mata
   end
 
   def celebrate
