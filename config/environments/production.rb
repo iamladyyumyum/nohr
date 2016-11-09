@@ -79,5 +79,5 @@ Rails.application.configure do
   
   # Added devise as per installation instructions
   config.action_mailer.default_url_options = { host: 'https://happy-joy-joy.herokuapp.com' }
-
+  config.serve_static_files = true
 end

@@ -6,7 +6,7 @@
     <span class="sr-only"></span>
     <span class="sr-only"></span>
    </button>
- 
+   <a class= "navbar-brand" href= "root_path", Traylor Made </a>
     <%= link_to 'Traylor Made', root_path, class: "navbar-brand" %>
   </div>
  
@@ -14,15 +14,21 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     
    <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to 'Konichiwa', root_path %></li>
-    <li><%= link_to 'Watashiwa', home_about_path %></li>
+    <li><%= link_to 'Konichiwa', root_path, class: 'btn btn-primary' %></li>
+    <li><%= link_to 'Watashiwa', home_about_path, class: 'btn btn-primary' %></li>
+    <li><%= link_to 'List Pins', pins_path, class: 'btn btn-primary' %></li>
+   
+    <% if user_signed_in? %>
+    <li><%= link_to 'Add Pin', new_pin_path, class: 'btn btn-primary' %></li>
+    <li><%= link_to 'Edit Profile', edit_pin_path, class: 'btn btn-primary'%></li>
     <li><%= link_to 'JA Mata', destroy_user_session_path, method: :delete %></li>
-    <li><%= link_to "Join Us", new_user_registration_path, class: "btn btn-primary" %></li>
-    <li><%= link_to "Feast Up", new_user_session_path, class: "btn btn-danger" %>
-</div>
-
-   </ul>
     
-  </div><!-- /.navbar-collapse -->
- </div><!-- /.container -->
-</nav>
+    <% else %>
+    <li><%= link_to "Feast Up", new_user_session_path, class: 'btn btn-danger' %></li>
+    <li><%= link_to "Join Us", new_user_registration_path, class: 'btn btn-primary' %></li>
+ 
+    <% end %>
+    </ul>
+    </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+    </nav>
